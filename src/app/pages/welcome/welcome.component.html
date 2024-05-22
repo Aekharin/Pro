@@ -1,0 +1,44 @@
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<div class="bc">
+    <div nz-row class="TABBAR">
+        <div nz-col nzSpan="24">
+            
+            <div nz-row>
+                <div nz-col nzSpan="6">col-6</div>
+                <div nz-col nzSpan="6">col-6</div>
+                <div nz-col nzSpan="6">col-6</div>
+                <div nz-col nzSpan="6">col-6</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="display">
+        <div nz-row>
+            <div nz-col nzSpan="12"></div>
+            <div nz-col nzSpan="12" class="login">
+                <form action="">
+                    <h1>Login</h1>
+                    <div class="input-box">
+                        <input type="text" placeholder="Username" required>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Password" required>
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+                    <div class="remember" style="display: flex; justify-content: space-between;">
+                        <label><input type="checkbox">Remember me</label>
+                        <a href="#">Forget password?</a>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn" (click)="onClick()">Login</button>
+                    <div class="register">
+                        <p>Don't have an account?
+                            <a href="#">Register</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

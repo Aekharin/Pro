@@ -1,0 +1,58 @@
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<div nz-row>
+  <div nz-col nzSpan="4" class="menu">
+    <button (click)="Onback()">LOGIN</button>
+  </div>
+  <div nz-col nzSpan="20" class="main">
+    <div nz-row>
+      <div nz-col nzSpan="24" class="tabbar">
+        <i class='bx bxs-bell-ring'></i>
+        <ul nz-menu nzMode="horizontal"
+          style="border-radius: 40px;margin-right: 20px;margin-top: 10px;margin-bottom: 10px;">
+          <li nz-submenu nzTitle="My Account">
+            <ul>
+              <li nz-menu-item>Seting</li>
+              <li nz-menu-item class="Myacc">
+                <button (click)="Onback()">SingOut</button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div nz-row>
+      <div nz-col nzSpan="24" class="board">
+        
+
+        <button (click)="Onadd()">Add Product</button>
+
+        
+      </div>
+    </div>
+    <div nz-row>
+      <div nz-col nzSpan="24" class="shop">
+
+        <div class="product-list">
+          <div *ngFor="let item of _productService.products">
+            <div class="product-item">
+              <img
+                src="{{item.url}}"
+                alt="Product 1" class="product-image">
+              <div class="product-details">
+                <h2 class="product-name">{{item.name}}</h2>
+                <p class="product-description">{{item.description}}</p>
+                <p class="product-price">Price : {{item.price}} ฿</p>
+                <p class="product-stock">In stock{{item.quantity}}</p>
+                <div class="button-group">
+                  <button class="buy-button">Buy Now</button>
+                  <button class="detail-button">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
